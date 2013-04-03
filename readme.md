@@ -9,10 +9,9 @@ MSI пакет для распространения через GPO ActiveX ко
 Развёртывание пакета через GPO
 ------------------------------
 
-Подготовленная административная точка установки расположена в подкаталоге [VB6CommonControlsRedist\bin\Release]().
-Дополнительной подготовки файла [`VB6CommonControlsRedist.msi`](VB6CommonControlsRedist\bin\Release\VB6CommonControlsRedist.msi)
-через `msiexec -a VB6CommonControlsRedist.msi` не требуется. Скачайте целиком папку [VB6CommonControlsRedist\bin\Release](),
-разместите на сетевом ресурсе, и - разверните через GPO.
+Подготовленная административная точка установки расположена в подкаталоге [VB6CommonControlsRedist\bin\Release](..\..\VB6CommonControlsRedist\bin\Release).
+Дополнительной подготовки файла `VB6CommonControlsRedist.msi` через `msiexec -a VB6CommonControlsRedist.msi` не требуется.
+Скачайте целиком папку [VB6CommonControlsRedist\bin\Release](..\..\VB6CommonControlsRedist\bin\Release), разместите на сетевом ресурсе, и - разверните через GPO.
 
 Сборка .msi пакета
 ------------------
