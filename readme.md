@@ -9,9 +9,9 @@ MSI пакет для распространения через GPO ActiveX ко
 Развёртывание пакета через GPO
 ------------------------------
 
-Подготовленная административная точка установки расположена в подкаталоге [VB6CommonControlsRedist\bin\Release](..\..\VB6CommonControlsRedist\bin\Release).
+Подготовленная административная точка установки расположена в подкаталоге [VB6CommonControlsRedist/bin/Release](../../VB6CommonControlsRedist/bin/Release).
 Дополнительной подготовки файла `VB6CommonControlsRedist.msi` через `msiexec -a VB6CommonControlsRedist.msi` не требуется.
-Скачайте целиком папку [VB6CommonControlsRedist\bin\Release](..\..\VB6CommonControlsRedist\bin\Release), разместите на сетевом ресурсе, и - разверните через GPO.
+Скачайте целиком папку [VB6CommonControlsRedist/bin/Release](../../VB6CommonControlsRedist/bin/Release), разместите на сетевом ресурсе, и - разверните через GPO.
 
 Сборка .msi пакета
 ------------------
@@ -24,7 +24,7 @@ MSI пакет для распространения через GPO ActiveX ко
 - [Windows Installer XML Toolset - WIX](http://wixtoolset.org/)
 
 Установить необходимо все пакеты в указанном порядке. В результате - получае MS Visual Studio 2012 с подготовленными
-шаблонами проектов WiX. После этого открываем файл решения <VB6CommonControlsRedist.sln> и собираем решение.
+шаблонами проектов WiX. После этого открываем файл решения `VB6CommonControlsRedist.sln` и собираем решение.
 
 Дополнительные сведения
 -----------------------
