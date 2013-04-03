@@ -19,8 +19,10 @@ MSI пакет для распространения через GPO ActiveX ко
 Для внесения изменений в пакет и повторной сборки пакета потребуются следующие продукты:
 
 - Microsoft Visual Studio 2012 Shell:
+
 	-[Isolated](http://www.microsoft.com/ru-ru/download/details.aspx?id=30670)
 	-[Integrated](http://www.microsoft.com/ru-ru/download/details.aspx?id=30663)
+
 - [Windows Installer XML Toolset - WIX](http://wixtoolset.org/)
 
 Установить необходимо все пакеты в указанном порядке. В результате - получае MS Visual Studio 2012 с подготовленными
