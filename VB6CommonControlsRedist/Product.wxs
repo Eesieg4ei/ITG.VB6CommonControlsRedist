@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product
+      Id="d34f38c3-f444-4cc2-8207-1c000b1493f7"
+      Name="MS Visual Basic 6.0 Common Controls Redistributable"
+      Language="1049"
+      UpgradeCode="1c62ca8e-0f62-4885-999b-e40134cc485d"
+      Codepage="1251"
+      Version="6.1.9782.0"
+      Manufacturer="IT-Service"
+  >
+    <Package
+        InstallerVersion="200"
+        Compressed="no"
+        AdminImage="yes"
+        Description="Пакет для развёртывания runtime компонентов VB6 через GPO"
+        InstallScope="perMachine"
+        InstallPrivileges="elevated"
+        Manufacturer="IT-Service"
+        SummaryCodepage="1251"
+    />
+
+		<MajorUpgrade
+        DowngradeErrorMessage="A newer version of [ProductName] is already installed."
+    />
+
+    <MediaTemplate />
+
+		<Feature
+        Id="MsVB6CommonControls"
+        Title="Microsoft Visual Basic 6.0 Common Controls"
+        Description="Microsoft Visual Basic 6.0 Common Controls"
+        Level="1"
+        Absent="disallow"
+        AllowAdvertise="yes"
+        InstallDefault="local"
+        TypicalDefault="install"
+    >
+			<ComponentGroupRef Id="MsVB6CommonControlsComponents" />
+		</Feature>
+
+  </Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir" FileSource=".">
+			<Directory Id="WindowsFolder" Name="Windows">
+        <Directory Id="SystemFolder" Name="System32">
+          <Component
+              Id="mscomctl.ocx"
+              Location="local"
+              SharedDllRefCount="yes"
+          >
+            <File Name="mscomctl.ocx" Vital="yes" SelfRegCost="1" KeyPath="yes">
+            </File>
+          </Component>
+          <Component
+              Id="mscomct2.ocx"
+              Location="local"
+              SharedDllRefCount="yes"
+          >
+            <File Name="mscomct2.ocx" Vital="yes" SelfRegCost="1" KeyPath="yes">
+            </File>
+          </Component>
+      </Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+    <ComponentGroup Id="MsVB6CommonControlsComponents">
+      <ComponentRef Id="mscomctl.ocx"/>
+      <ComponentRef Id="mscomct2.ocx"/>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
